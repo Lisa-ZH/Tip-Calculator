@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tip Calculator</title>
+  <meta name="description" content="The HTML5 Template">
+  <meta name="author" content="hztechnology">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon.png">
+  <link rel="icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <div class="panel panel-default rounded">
+      <div class="panel-heading">Tip&nbsp;&nbsp;&nbsp;&nbsp;Calculator</div>
+      <div class="panel-body">
+        <form class="form-horizontal">
+          <!--  Bill Amount  -->
+          <div class="form-group">
+            <label class="control-label col-xs-3" for="billamount">Bill Amount</label>
+            <div class="col-xs-9"> 
+              <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="text" class="form-control" id="billamount" value="100.00">
+              </div>
+            </div>
+          </div>
+          <!--  Tip  -->
+          <div class="form-group">
+            <label class="control-label col-xs-3" for="tip">Tip</label>
+            <div class="col-xs-9"> 
+              <div class="input-group">
+                <input type="text" class="form-control" id="tip" value="15">
+                <span class="input-group-addon">%</span>
+              </div>
+            </div>
+          </div>
+          <!--  Split Bill  -->
+          <div class="form-group">
+            <label class="control-label col-xs-3" for="splitbill">Split Bill</label>
+            <div class="col-xs-9">
+              <div class="col-xs-2">
+                <input type="checkbox" class="form-control" id="splitbill" >
+              </div>
+              <!--  Between  -->
+              <div class="form-group col-xs-10 betw">
+                <label class="control-label col-xs-6" for="between">Between</label>
+                <div class="col-xs-6">
+                  <input type="text" class="form-control" id="between" value="2">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group"> 
+            <div class="col-xs-offset-2 col-xs-10">
+              <button type="submit" class="btn btn-primary pull-right">Calculate</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="panel-footer">
+        <!--  For Your Information  -->
+        <div id="fyi">
+          <h4>Just so you know...</h4>
+          <hr>
+          <div class="row">
+            <div class="col-xs-3"><strong>Tip Amt(10%)</strong></div>
+            <div class="col-xs-3" id="tipamt10"></div>
+            <div class="col-xs-3"><strong>Total Amount: </strong></div>
+            <div class="col-xs-3" id="totalamt10"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"><strong>Tip Amt(15%)</strong></div>
+            <div class="col-xs-3" id="tipamt15"></div>
+            <div class="col-xs-3"><strong>Total Amount: </strong></div>
+            <div class="col-xs-3" id="totalamt15"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"><strong>Tip Amt(18%)</strong></div>
+            <div class="col-xs-3" id="tipamt18"></div>
+            <div class="col-xs-3"><strong>Total Amount: </strong></div>
+            <div class="col-xs-3" id="totalamt18"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3"><strong>Tip Amt(20%)</strong></div>
+            <div class="col-xs-3" id="tipamt20"></div>
+            <div class="col-xs-3"><strong>Total Amount: </strong></div>
+            <div class="col-xs-3" id="totalamt20"></div>
+          </div>
+        </div>
+        
+        <div id="total">
+          <h4>Amount for this time</h4>
+          <hr>
+          <div class="row">
+            <div class="col-xs-6"><strong>Tip Amount</strong></div>
+            <div class="col-xs-6" id="tipamount"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6"><strong>Total Price</strong></div>
+            <div class="col-xs-6" id="totalprice"></div>
+          </div>
+        </div>
+
+        <div id="person">
+          <h4>Per person</h4><hr>
+          <div class="row">
+            <div class="col-xs-6"><strong>Bill Amount</strong></div>
+            <div class="col-xs-6" id="pbill"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6"><strong>Tip Amount</strong></div>
+            <div class="col-xs-6" id="ptipamount"></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6"><strong>Total Price</strong></div>
+            <div class="col-xs-6" id="ptotalprice"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="js/scripts.js"></script>
+</body>
+</html>
